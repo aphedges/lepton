@@ -21,3 +21,14 @@
   display: none !important;
 }
 */
+
+/* From https://github.com/black7375/Firefox-UI-Fix/issues/1075#issuecomment-2771427493 */
+.tabbrowser-tab {
+	&:is([muted], [soundplaying], [activemedia-blocked]) {
+		#tabbrowser-tabs[orient="horizontal"] &:not([pinned]) {
+			min-width: var(--tab-min-width-pref, var(--tab-min-width)) !important;
+			--tab-icon-end-margin: inherit !important;
+		}
+	}
+}
+.tab-audio-button{margin-inline-end: unset !important}
